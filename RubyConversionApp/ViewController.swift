@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import Keys
 
+/// レスポンスデータ
 struct ResponseData: Codable {
     var request_id = ""
     var output_type = ""
@@ -35,6 +36,9 @@ class ViewController: UIViewController {
         outputCharacter.adjustsFontSizeToFitWidth = true
     }
     
+    /// ルビ変換ボタン押下時、ルビを画面に表示するメソッド
+    ///
+    /// - Parameter sender: UIButton
     @IBAction func convertRuby(_ sender: UIButton) {
         guard let inputText = inputCharacter.text else {
             return
@@ -49,7 +53,11 @@ class ViewController: UIViewController {
         }
     }
     
-    // ひらがな化APIにリクエスト送信する
+    /// ひらがな化APIにリクエスト送信する
+    ///
+    /// - Parameters:
+    ///   - sentence: 入力された文字
+    ///   - completion: リクエスト送信完了
     func HttpRequest(sentence: String, completion: @escaping (ResponseData)->Void) {
         // リクエスト情報
         let url = "https://labs.goo.ne.jp/api/hiragana"
@@ -74,6 +82,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /// 画面タップ時、キーボードを閉じる
+    ///
+    /// - Parameter sender: Any
     @IBAction func downKeyboard(_ sender: Any) {
         inputCharacter.endEditing(true)
     }
