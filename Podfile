@@ -6,7 +6,12 @@ target 'RubyConversionApp' do
   use_frameworks!
 
   # Pods for RubyConversionApp
-  pod 'SwiftyJSON'
   pod 'Alamofire'
+
+plugin 'cocoapods-keys', {
+  :project => "RubyConversionApp",
+  :keys => [
+    "HiraganaAPIKey"
+  ]}
 
 end
