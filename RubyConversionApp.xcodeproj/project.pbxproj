@@ -12,9 +12,11 @@
 		91100DFC22D084D3005BD844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91100DFA22D084D3005BD844 /* Main.storyboard */; };
 		91100DFE22D084D5005BD844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91100DFD22D084D5005BD844 /* Assets.xcassets */; };
 		91100E0122D084D5005BD844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91100DFF22D084D5005BD844 /* LaunchScreen.storyboard */; };
+		93A8265D26B7EFB970B79E96 /* Pods_RubyConversionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D4E8520B9FE82DFFB27B22 /* Pods_RubyConversionApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32D4E8520B9FE82DFFB27B22 /* Pods_RubyConversionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubyConversionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91100DF322D084D3005BD844 /* RubyConversionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RubyConversionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91100DF622D084D3005BD844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91100DF822D084D3005BD844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		91100DFD22D084D5005BD844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91100E0022D084D5005BD844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91100E0222D084D5005BD844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B51FC9A6CCCFD3F7C0CC74 /* Pods-RubyConversionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyConversionApp.debug.xcconfig"; path = "Target Support Files/Pods-RubyConversionApp/Pods-RubyConversionApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE6C010A09DFE591CCC9EDF /* Pods-RubyConversionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyConversionApp.release.xcconfig"; path = "Target Support Files/Pods-RubyConversionApp/Pods-RubyConversionApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A8265D26B7EFB970B79E96 /* Pods_RubyConversionApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA2648A8639F38D28B83A6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7B51FC9A6CCCFD3F7C0CC74 /* Pods-RubyConversionApp.debug.xcconfig */,
+				FDE6C010A09DFE591CCC9EDF /* Pods-RubyConversionApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		91100DEA22D084D3005BD844 = {
 			isa = PBXGroup;
 			children = (
 				91100DF522D084D3005BD844 /* RubyConversionApp */,
 				91100DF422D084D3005BD844 /* Products */,
+				2EA2648A8639F38D28B83A6A /* Pods */,
+				B30C3A557B789A9F872DF7D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = RubyConversionApp;
 			sourceTree = "<group>";
 		};
+		B30C3A557B789A9F872DF7D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32D4E8520B9FE82DFFB27B22 /* Pods_RubyConversionApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91100E0522D084D5005BD844 /* Build configuration list for PBXNativeTarget "RubyConversionApp" */;
 			buildPhases = (
+				F2D850FD755E7147A14FB967 /* [CP] Check Pods Manifest.lock */,
 				91100DEF22D084D3005BD844 /* Sources */,
 				91100DF022D084D3005BD844 /* Frameworks */,
 				91100DF122D084D3005BD844 /* Resources */,
+				CF8098B97BB30A3C5BAB7D5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF8098B97BB30A3C5BAB7D5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubyConversionApp/Pods-RubyConversionApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubyConversionApp/Pods-RubyConversionApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D850FD755E7147A14FB967 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RubyConversionApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91100DEF22D084D3005BD844 /* Sources */ = {
@@ -280,6 +356,7 @@
 		};
 		91100E0622D084D5005BD844 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B51FC9A6CCCFD3F7C0CC74 /* Pods-RubyConversionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +375,7 @@
 		};
 		91100E0722D084D5005BD844 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE6C010A09DFE591CCC9EDF /* Pods-RubyConversionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
