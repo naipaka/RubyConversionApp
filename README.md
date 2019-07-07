@@ -11,6 +11,9 @@
 - 言語バージョン：Swift 5.0
 - ターゲット：iOS 12.0
 
+## Using "API"
+- ひらがな化API
+
 ## Using "Library"
 - cocoapods
   - Alamofire 
